@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souleymane SAKANDE - Generative AI Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 4rem;
+            }
+        }
+        /* Custom accent color */
+        .accent-bg {
+            background-color: #EF448B; /* A vibrant pink similar to the inspiration */
+        }
+        .accent-text {
+            color: #EF448B;
+        }
+        .hero-section {
+            background-color: #f8f8f8; /* Lighter background for the hero */
+            min-height: calc(100vh - 80px); /* Adjust based on header height */
+            display: flex;
+            align-items: center;
+            padding-top: 5rem; /* Space for fixed header */
+        }
+        @media (max-width: 767px) {
+            .hero-section {
+                padding-top: 7rem; /* More space for mobile header */
+            }
+        }
+        .hero-content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            .hero-content-container {
+                flex-direction: row;
+                text-align: left;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg py-4 fixed w-full z-10">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#about-me" class="text-2xl font-extrabold text-gray-900 rounded-md p-2 hover:bg-gray-100 transition-colors">
+                <span class="accent-text mr-1">S.</span>SAKANDE
+            </a>
+            <ul class="hidden md:flex items-center space-x-6">
+                <li><a href="#about-me" class="text-gray-600 hover:text-gray-900 font-medium transition-colors rounded-md p-2">About Me</a></li>
+                <li><a href="#about-course" class="text-gray-600 hover:text-gray-900 font-medium transition-colors rounded-md p-2">About the Course</a></li>
+                <li><a href="#submissions" class="text-gray-600 hover:text-gray-900 font-medium transition-colors rounded-md p-2">My Submissions</a></li>
+                <li>
+                    <a href="#contact" class="inline-block accent-bg text-white font-bold py-2 px-6 rounded-full shadow-lg hover:bg-pink-600 transform hover:scale-105 transition-all duration-300">
+                        Connect
+                    </a>
+                </li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-md">
+            <ul class="flex flex-col items-center space-y-2">
+                <li><a href="#about-me" class="block py-2 text-gray-600 hover:text-gray-900 font-medium transition-colors rounded-md w-full text-center" onclick="closeMenu()">About Me</a></li>
+                <li><a href="#about-course" class="block py-2 text-gray-600 hover:text-gray-900 font-medium transition-colors rounded-md w-full text-center" onclick="closeMenu()">About the Course</a></li>
+                <li><a href="#submissions" class="block py-2 text-gray-600 hover:text-gray-900 font-medium transition-colors rounded-md w-full text-center" onclick="closeMenu()">My Submissions</a></li>
+                <li>
+                    <a href="#contact" class="inline-block accent-bg text-white font-bold py-2 px-6 rounded-full hover:bg-pink-600 transition-colors" onclick="closeMenu()">
+                        Connect
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section container mx-auto px-4 py-16 md:py-0">
+        <div class="hero-content-container max-w-5xl mx-auto">
+            <!-- Left content (Text) -->
+            <div class="w-full md:w-1/2 flex flex-col justify-center mb-8 md:mb-0 md:pr-10">
+                <span class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">GENERATIVE AI FOR PRODUCTIVITY</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 leading-tight text-gray-900">
+                    <span class="accent-text">Souleymane</span> <br> SAKANDE
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-md mx-auto md:mx-0">
+                    Exploring cutting-edge AI tools to revolutionize work & research workflows and drive data-informed decisions.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#about-me" class="inline-block accent-bg text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-pink-600 transform hover:scale-105 transition-all duration-300">
+                        Learn More
+                    </a>
+                    <a href="#submissions" class="inline-block border-2 border-gray-300 text-gray-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <!-- Right content (Image) -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                <img src="https://placehold.co/450x550/e0e0e0/ffffff?text=Your+Professional+Photo" alt="Souleymane SAKANDE" class="rounded-xl shadow-2xl object-cover max-h-[550px] w-full md:w-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="section-padding bg-white shadow-inner">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div class="md:order-2">
+                    <img src="https://placehold.co/400x400/9988ff/ffffff?text=Souleymane+SAKANDE" alt="Souleymane SAKANDE" class="rounded-full shadow-xl mx-auto md:mx-0 w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-indigo-200">
+                </div>
+                <div class="md:order-1 text-center md:text-left">
+                    <p class="text-lg leading-relaxed mb-4">
+                        I am a results-driven professional with over 10 years of experience in information management and monitoring & evaluation within the health and education sectors, particularly in humanitarian settings. My academic background includes a Master of Public Health in Quantitative Methods (Biostatistics), a Master's degree in Statistics, and a Bachelor of Science in Mathematics-Physics.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        I possess extensive experience managing humanitarian data systems for UNICEF, WHO, and other international organizations, leveraging tools like STATA, R, Python, QGIS, KoBo Toolbox, and Power BI. My expertise spans data consolidation, quality improvement, statistical analysis, and data visualization to inform strategic decisions. I am committed to capacity building, knowledge sharing, and fostering an inclusive environment.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gray-700 mb-6 text-center">Key Skills & Expertise</h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
+                    <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-sm">
+                        <svg class="w-6 h-6 accent-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Data Analysis & Visualization (STATA, SPSS, R, Python, Power BI)</span>
+                    </li>
+                    <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-sm">
+                        <svg class="w-6 h-6 accent-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Geographic Information Systems (ArcGIS, QGIS)</span>
+                    </li>
+                    <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-sm">
+                        <svg class="w-6 h-6 accent-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Data Collection & Database Tools (KoBo Toolbox, ODK, RedCap)</span>
+                    </li>
+                    <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-sm">
+                        <svg class="w-6 h-6 accent-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Information Management & M&E</span>
+                    </li>
+                    <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-sm">
+                        <svg class="w-6 h-6 accent-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Humanitarian Data Systems</span>
+                    </li>
+                    <li class="flex items-center bg-gray-100 p-4 rounded-lg shadow-sm">
+                        <svg class="w-6 h-6 accent-text mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Fluent in French & English</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Course Section -->
+    <section id="about-course" class="section-padding bg-gray-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">About the Course: Generative AI for Work & Research</h2>
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-10">
+                <p class="text-lg leading-relaxed mb-6">
+                    This "Generative AI for Work & Research Productivity" course, offered by The GRAPH Courses, is an 8-week live cohort program focused on "No-Code AI Tools for Task Automation". It's designed to equip professionals and researchers with practical skills to leverage AI for enhanced productivity across various domains.
+                </p>
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Course Features:</h3>
+                <ul class="list-disc list-inside text-lg leading-relaxed mb-6 space-y-2">
+                    <li>Weekly live workshops and help sessions</li>
+                    <li>Private community forums for collaboration</li>
+                    <li>Personalized feedback on assessments</li>
+                    <li>Capstone project coaching</li>
+                    <li>Shareable certificate upon completion</li>
+                    <li>Lifetime access to a tutorial library</li>
+                </ul>
+                <h3 class="text-2xl font-semibold text-gray-700 mb-4">Course Modules:</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2">Module 1: Websites, Documents & Presentations</h4>
+                        <p class="text-gray-700">Learn about LLMs, generating Markdown, Latex, and HTML, building simple research websites, and using AI presentation tools.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2">Module 2: AI-Automated Data Analysis</h4>
+                        <p class="text-gray-700">Master AI tools for data analysis, file manipulation, and automated report creation (e.g., ChatGPT Code Interpreter, TheBricks).</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2">Module 3: GenAI for Research & Text Analysis</h4>
+                        <p class="text-gray-700">Explore AI techniques for literature search, text analysis, knowledge synthesis, and extracting insights from large text collections.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2">Module 4: Custom GPTs and Chatbots</h4>
+                        <p class="text-gray-700">Dive into building research assistants, understanding LLM architecture, context windows, RAG systems, and integrating AI assistants.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2">Module 5: AI for Task Automation</h4>
+                        <p class="text-gray-700">Discover strategies for automating repetitive research tasks, setting up email response automations, and designing AI agents.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2">Module 6: GenAI for Communication and Outreach</h4>
+                        <p class="text-gray-700">Explore AI-driven approaches for research dissemination, creating summaries, scientific figures, video abstracts, and scheduling content.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                        <h4 class="font-bold text-xl text-gray-800 mb-2">Module 7: Capstone Project & Showcase</h4>
+                        <p class="text-gray-700">Collaborate to create a final AI solution, tool, or presentation, receive feedback, and present projects to peers and guests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Weekly Submissions Section -->
+    <section id="submissions" class="section-padding bg-white shadow-inner">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">My Weekly Submissions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Week 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 1: Websites & Documents</h3>
+                        <p class="text-gray-700 mb-4">Introduction to LLMs and creating structured documents and simple websites.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+                <!-- Week 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 2: AI-Automated Data Analysis</h3>
+                        <p class="text-gray-700 mb-4">Automating data analysis, processing datasets, and generating reports.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+                <!-- Week 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 3: GenAI for Research & Text Analysis</h3>
+                        <p class="text-gray-700 mb-4">Leveraging AI for literature reviews, text classification, and knowledge synthesis.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+                <!-- Week 4 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 4: Custom GPTs and Chatbots</h3>
+                        <p class="text-gray-700 mb-4">Building custom AI assistants and interactive chatbots for research.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+                <!-- Week 5 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 5: AI for Task Automation</h3>
+                        <p class="text-gray-700 mb-4">Automating repetitive research tasks and designing AI agents.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+                <!-- Week 6 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 6: GenAI for Communication & Outreach</h3>
+                        <p class="text-gray-700 mb-4">Creating AI-driven content for research dissemination and communication.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+                <!-- Week 7 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 7: Capstone Project & Showcase</h3>
+                        <p class="text-gray-700 mb-4">Finalizing and presenting a comprehensive AI solution or tool.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+                <!-- Week 8 -->
+                <div class="bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-200">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3">Week 8: Ongoing Learning & Future Work</h3>
+                        <p class="text-gray-700 mb-4">Reflections on the course and plans for future applications of AI.</p>
+                        <a href="#" class="inline-block accent-bg text-white font-medium py-2 px-5 rounded-full hover:bg-pink-600 transition-colors opacity-75 cursor-not-allowed">View Submission (Coming Soon)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (New) -->
+    <section id="contact" class="section-padding accent-bg text-white">
+        <div class="container mx-auto px-4 text-center max-w-2xl">
+            <h2 class="text-4xl font-bold mb-6">Let's Connect!</h2>
+            <p class="text-lg mb-8">
+                I'm always open to discussing new opportunities, collaborations, or simply sharing insights on Generative AI.
+                Feel free to reach out via my professional network.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <!-- Placeholder for LinkedIn/other professional link -->
+                <a href="https://www.linkedin.com/in/souleymane-sakande" target="_blank" rel="noopener noreferrer" class="bg-white text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+                    Find me on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 Souleymane SAKANDE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        // Toggle mobile menu visibility
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Get the target section's ID from the href
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Scroll into view with smooth behavior
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
